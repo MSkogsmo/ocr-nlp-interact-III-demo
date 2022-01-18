@@ -36,7 +36,7 @@ def get_confidence(pages):
 
 #Function for writing the machine written text to a txt-file
 def write_to_file(response):
-    file = io.open('Summarization/prompt.txt', 'w', encoding='utf-8')
+    file = io.open('/content/ocr-nlp-interact-III-demo/SuHEJmmarization/prompt.txt', 'w', encoding='utf-8')
     file.write(response.full_text_annotation.text)
     file.close()
 
@@ -48,9 +48,9 @@ os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = r'Keys/key_vision.json'
 client = vision.ImageAnnotatorClient()
 
 # Define file name and path
-FILE_NAME = 'DSC_0870.NEF'
-FOLDER_PATH = r'DataCollection/unknown-unknown'
-response = detect_text(os.path.join(FOLDER_PATH, FILE_NAME))
-write_to_file(response)
+#FILE_NAME = 'DSC_0870.NEF'
+#FOLDER_PATH = r'DataCollection/unknown-unknown'
+#response = detect_text(os.path.join(FOLDER_PATH, FILE_NAME))
+#write_to_file(response)
 
-get_confidence(response.full_text_annotation.pages)
+#get_confidence(response.full_text_annotation.pages)
