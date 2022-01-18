@@ -130,6 +130,7 @@ dmypy.json
 
 # API Keys
 /Keys
+keys_variables.py
 
 # Data
 /DataCollection
