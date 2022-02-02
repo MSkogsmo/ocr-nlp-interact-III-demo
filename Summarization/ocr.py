@@ -48,9 +48,9 @@ os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = r'Keys/key_vision.json'
 client = vision.ImageAnnotatorClient()
 
 # Define file name and path
-#FILE_NAME = 'DSC_0870.NEF'
-#FOLDER_PATH = r'DataCollection/unknown-unknown'
-#response = detect_text(os.path.join(FOLDER_PATH, FILE_NAME))
-#write_to_file(response)
+FILE_NAME = 'DSC_0870.NEF'
+FOLDER_PATH = r'DataCollection/unknown-unknown'
+response = detect_text(os.path.join(FOLDER_PATH, FILE_NAME))
+write_to_file(response)
 
-#get_confidence(response.full_text_annotation.pages)
+get_confidence(response.full_text_annotation.pages)
